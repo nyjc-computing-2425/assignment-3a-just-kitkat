@@ -20,7 +20,7 @@ if all(checks):
     total = 0
     for index, num in enumerate(digits):
         total = total + int(num)*weights[index]
-    total += (nric[0] in "tg") * 4
+    total = total + (nric[0] in "tg")*4
     
     if conversion[nric[0]][total%11] == nric[-1]:
         print("NRIC is valid.")
