@@ -18,8 +18,13 @@ if all(checks):
         "g": "xwutrqpnmlk",
     }
     total = 0
-    for index, num in enumerate(digits):
-        total = total + int(num)*weights[index]
+    total = total + int(digits[0])*weights[0]
+    total = total + int(digits[1])*weights[1]
+    total = total + int(digits[2])*weights[2]
+    total = total + int(digits[3])*weights[3]
+    total = total + int(digits[4])*weights[4]
+    total = total + int(digits[5])*weights[5]
+    total = total + int(digits[6])*weights[6]
     total = total + (nric[0] in "tg")*4
     
     if conversion[nric[0]][total%11] == nric[-1]:
